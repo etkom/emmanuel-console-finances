@@ -133,13 +133,11 @@ for(var i = 0; i < monthlyChange.length; i++) {
 console.log(monthlyChangeTotal)
 
 
-var avgMonthlyChange = (monthlyChangeTotal / monthlyChangeTotal.length);
-console.log(test.length)
-console.log(avgMonthlyChange)
 
 
-// var avgChange = (monthlyChange / monthlyChange.length);
-// console.log(avgChange)
 
-// var avgChange = netTotal % (numOfMonths - 1);
-// console.log(avgChange)
+var denominator = numOfMonths - 1
+console.log(denominator)
+
+var avgChange = (monthlyChangeTotal / denominator);
+console.log(avgChange.toFixed(2))
