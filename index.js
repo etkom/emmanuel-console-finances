@@ -103,12 +103,16 @@ console.log(dates)
 // The net total amount of Profit/Losses over the entire period.
 // Create an array for profitLosses
 // Add all the elements in the array
-
-// for(var j = 0; j < finances.length; j++){
-
-
 var profitLosses = [];
 for(var j = 0; j < finances.length; j++){
 profitLosses[j] = finances[j][1];
 }
+
 console.log(profitLosses)
+
+var netTotal = 0;
+for (var i = 0; i < profitLosses.length; i++) {
+  netTotal += profitLosses[i];
+}
+
+console.log(netTotal)
