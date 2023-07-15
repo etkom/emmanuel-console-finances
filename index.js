@@ -96,25 +96,22 @@ for(var i = 0; i < finances.length; i++){
   dates[i] = finances[i][0];
 }
 var numOfMonths = dates.length
-console.log(numOfMonths)
-console.log(dates)
 
 
 // The net total amount of Profit/Losses over the entire period.
 // Create an array for profitLosses
-// Add all the elements in the array
+// Add all the elements in the array to get net total of proft and losses
 var profitLosses = [];
 for(var j = 0; j < finances.length; j++){
 profitLosses[j] = finances[j][1];
 }
-console.log(profitLosses)
 
+// Calculate net total
 var netTotal = 0;
 for (var i = 0; i < profitLosses.length; i++) {
   netTotal += profitLosses[i];
 }
 
-console.log(netTotal)
 
 // The average of the changes in Profit/Losses over the entire period.
 // Compute total change from month to month
@@ -124,25 +121,30 @@ var monthlyChange = [];
 for (var i = 0; i < profitLosses.length; i++) {
 monthlyChange[i - 1] = profitLosses[i]- profitLosses[i - 1];
   }
-console.log(monthlyChange)
 
 var monthlyChangeTotal = 0;
 for(var i = 0; i < monthlyChange.length; i++) {
   monthlyChangeTotal += monthlyChange[i];
 }
-console.log(monthlyChangeTotal)
 
 
 
 
 
 var denominator = numOfMonths - 1
-console.log(denominator)
 
 var avgChange = (monthlyChangeTotal / denominator);
-console.log(avgChange.toFixed(2))
+
 
 var maxProfitLosses = Math.max(...monthlyChange)
-console.log(maxProfitLosses)
+
 var minProfitLosses = Math.min(...monthlyChange)
-console.log(minProfitLosses)
+
+
+console.log('Financial Analysis')
+console.log ('------------------')
+console.log('Total Months: ' + numOfMonths)
+console.log('Average Change: '+ avgChange.toFixed(2))
+console.log('Greatest Increase in Profits/Losses: Feb-2012 ($' + maxProfitLosses + ')')
+console.log('Greatest Decrease in Profits/Losses: Sep-2013 ($' + minProfitLosses + ')')
+
