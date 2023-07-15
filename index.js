@@ -88,7 +88,6 @@ var finances = [
 ];
 
 
-
 // The total number of months included in the dataset.
 // Select all month data from 2 dimensional array 
 // Count number of months using length function
@@ -100,6 +99,7 @@ var numOfMonths = dates.length
 console.log(numOfMonths)
 console.log(dates)
 
+
 // The net total amount of Profit/Losses over the entire period.
 // Create an array for profitLosses
 // Add all the elements in the array
@@ -107,7 +107,6 @@ var profitLosses = [];
 for(var j = 0; j < finances.length; j++){
 profitLosses[j] = finances[j][1];
 }
-
 console.log(profitLosses)
 
 var netTotal = 0;
@@ -116,3 +115,31 @@ for (var i = 0; i < profitLosses.length; i++) {
 }
 
 console.log(netTotal)
+
+// The average of the changes in Profit/Losses over the entire period.
+// Compute total change from month to month
+// Create an array with MOM change in Profit and loss
+
+var monthlyChange = [];
+for (var i = 0; i < profitLosses.length; i++) {
+monthlyChange[i - 1] = profitLosses[i]- profitLosses[i - 1];
+  }
+console.log(monthlyChange)
+
+var monthlyChangeTotal = 0;
+for(var i = 0; i < monthlyChange.length; i++) {
+  monthlyChangeTotal += monthlyChange[i];
+}
+console.log(monthlyChangeTotal)
+
+
+var avgMonthlyChange = (monthlyChangeTotal / monthlyChangeTotal.length);
+console.log(test.length)
+console.log(avgMonthlyChange)
+
+
+// var avgChange = (monthlyChange / monthlyChange.length);
+// console.log(avgChange)
+
+// var avgChange = netTotal % (numOfMonths - 1);
+// console.log(avgChange)
