@@ -141,3 +141,8 @@ console.log(denominator)
 
 var avgChange = (monthlyChangeTotal / denominator);
 console.log(avgChange.toFixed(2))
+
+var maxProfitLosses = Math.max(...monthlyChange)
+console.log(maxProfitLosses)
+var minProfitLosses = Math.min(...monthlyChange)
+console.log(minProfitLosses)
