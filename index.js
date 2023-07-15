@@ -96,6 +96,19 @@ var dates = [];
 for(var i = 0; i < finances.length; i++){
   dates[i] = finances[i][0];
 }
-var Numofmonths = dates.length
-console.log(Numofmonths)
+var numOfMonths = dates.length
+console.log(numOfMonths)
 console.log(dates)
+
+// The net total amount of Profit/Losses over the entire period.
+// Create an array for profitLosses
+// Add all the elements in the array
+
+// for(var j = 0; j < finances.length; j++){
+
+
+var profitLosses = [];
+for(var j = 0; j < finances.length; j++){
+profitLosses[j] = finances[j][1];
+}
+console.log(profitLosses)
