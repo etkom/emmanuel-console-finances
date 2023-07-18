@@ -1,3 +1,4 @@
+// These are the primary finance records
 var finances = [
   ['Jan-2010', 867884],
   ['Feb-2010', 984655],
@@ -144,7 +145,7 @@ console.log('Financial Analysis')
 console.log ('------------------')
 console.log('Total Months: ' + numOfMonths)
 console.log('Average Change: '+ avgChange.toFixed(2))
-console.log('Greatest Increase in Profits/Losses: Feb-2012 ($' + maxProfitLosses + ')')
-console.log('Greatest Decrease in Profits/Losses: Sep-2013 ($' + minProfitLosses + ')')
+console.log('Greatest Increase in Profits/Losses: ' + dates[25] + ' ($' + maxProfitLosses + ')')
+console.log('Greatest Decrease in Profits/Losses: ' + dates[44] + ' ($' + minProfitLosses + ')')
 
 
