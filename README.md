@@ -20,7 +20,7 @@ To view code functionality:
 Here's a screenshot of the displayed results
 
 
-![alt Financial records images](../emmanuel-console-finances/images/console-finances.png)
+![alt Financial records images](../emmanuel-console-finances/images/Financial%20analysis.png)
 
 ## Credits
 
