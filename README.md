@@ -16,9 +16,10 @@ To view code functionality:
 1. Visit the website at https://etkom.github.io/emmanuel-console-finances/ 
 2. Right-click anywhere on the screen and select inspect from the options
 3. From the new tab open, select console to view results
+4. To view the repository, visit https://github.com/etkom/emmanuel-console-finances
+
 
 Here's a screenshot of the displayed results
-
 
 ![alt Financial records images](./images/Financial%20analysis.png)
 
