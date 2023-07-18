@@ -116,7 +116,6 @@ for (var i = 0; i < profitLosses.length; i++) {
 // The average of the changes in Profit/Losses over the entire period.
 // Compute total change from month to month
 // Create an array with MOM change in Profit and loss
-
 var monthlyChange = [];
 for (var i = 0; i < profitLosses.length; i++) {
 monthlyChange[i - 1] = profitLosses[i]- profitLosses[i - 1];
@@ -127,24 +126,25 @@ for(var i = 0; i < monthlyChange.length; i++) {
   monthlyChangeTotal += monthlyChange[i];
 }
 
-
-
-
-
+// Calculate denominator first to follow PEMDAS rule
 var denominator = numOfMonths - 1
-
 var avgChange = (monthlyChangeTotal / denominator);
 
-
+//The greatest increase in profit
 var maxProfitLosses = Math.max(...monthlyChange)
 
+
+
+// The greatest decrease in profit
 var minProfitLosses = Math.min(...monthlyChange)
 
 
+// Print all records
 console.log('Financial Analysis')
 console.log ('------------------')
 console.log('Total Months: ' + numOfMonths)
 console.log('Average Change: '+ avgChange.toFixed(2))
 console.log('Greatest Increase in Profits/Losses: Feb-2012 ($' + maxProfitLosses + ')')
 console.log('Greatest Decrease in Profits/Losses: Sep-2013 ($' + minProfitLosses + ')')
+
 
