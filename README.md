@@ -21,7 +21,7 @@ To view code functionality:
 
 Here's a screenshot of the displayed results
 
-![alt Financial records images](./images/Financial%20analysis.png)
+![alt Financial records images](./images/Financial%20analysis%202.0.png)
 
 ## Credits
 
