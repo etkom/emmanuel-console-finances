@@ -134,18 +134,25 @@ var avgChange = (monthlyChangeTotal / denominator);
 //The greatest increase in profit
 var maxProfitLosses = Math.max(...monthlyChange)
 
-
-
 // The greatest decrease in profit
 var minProfitLosses = Math.min(...monthlyChange)
+
+// Calculate the date of greatest increase using the index from maxProfitLosses
+var maxDateIndex = (monthlyChange.indexOf(maxProfitLosses)) + 1;
+var maxDate = dates[maxDateIndex]
+
+// Calculate the date of greatest Decrease using the index from minProfitLosses
+var minDateIndex = (monthlyChange.indexOf(minProfitLosses)) + 1;
+var minDate = dates[minDateIndex]
 
 
 // Print all records
 console.log('Financial Analysis')
 console.log ('------------------')
 console.log('Total Months: ' + numOfMonths)
+console.log('Total: $' + netTotal)
 console.log('Average Change: '+ avgChange.toFixed(2))
-console.log('Greatest Increase in Profits/Losses: ' + dates[25] + ' ($' + maxProfitLosses + ')')
-console.log('Greatest Decrease in Profits/Losses: ' + dates[44] + ' ($' + minProfitLosses + ')')
+console.log('Greatest Increase in Profits/Losses: ' + maxDate + ' ($' + maxProfitLosses + ')')
+console.log('Greatest Decrease in Profits/Losses: ' + minDate + ' ($' + minProfitLosses + ')')
 
 
